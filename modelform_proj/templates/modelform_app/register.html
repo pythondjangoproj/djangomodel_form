@@ -1,0 +1,25 @@
+{% extends "modelform_app/index.html" %}
+
+{% block content %}
+<h1>student complete details</h1>
+<table border="1">
+    <thead>
+    <th>sno</th>
+    <th>sname</th>
+    <th>saddr</th>
+    <th>marks</th>
+    </thead>
+    {% for d in St_data %}
+    <tr>
+        <td>{{d.first_name}}</td>
+        <td>{{d.last_name}}</td>
+        <td>{{d.marks}}</td>
+        <td>{{d.subject}}</td>
+    </tr>
+    {%endfor%}
+</table><br><br>
+        <a class="btn btn-primary " href="/home" role="button">Back to register</a><br><br>
+
+    <a class="btn btn-primary " href="/api" role="button">student API</a><br><br>
+
+{% endblock %}
